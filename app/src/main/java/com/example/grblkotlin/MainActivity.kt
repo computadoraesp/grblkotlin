@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Configurar USB (OTG)
-        usbManager = getSystemService(Context.USB_SERVICE) as UsbManager
+        usbManager = getSystemService(USB_SERVICE) as UsbManager
         val deviceList: Map<String, UsbDevice> = usbManager.deviceList
         if (deviceList.isEmpty()) {
             sampleText.text = "No se encontraron dispositivos USB conectados."
